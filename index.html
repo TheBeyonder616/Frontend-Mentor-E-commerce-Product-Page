@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./script.js" defer></script>
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <nav class="navigation">
+        <!-- First Section -->
+        <section class="navigation__logo">
+          <!-- Menu -->
+          <div>
+            <img
+              src="./img/icon-menu.svg"
+              alt="An icon of a menu"
+              role="button"
+              aria-expanded="false"
+              aria-controls="menu"
+              data-menu-mobile
+            />
+          </div>
+          <!-- Logo -->
+          <div class="logo">
+            <img src="./img/logo.svg" alt="logo of the website" />
+          </div>
+
+          <!-- Tablet nav -->
+          <ul data-list-desktop>
+            <li><a href="#header">Collections</a></li>
+            <li><a href="#header">Men</a></li>
+            <li><a href="#main"> Women</a></li>
+            <li><a href="#main">About</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+        </section>
+
+        <!-- Second Section -->
+        <section class="navigation__profile">
+          <!-- cart -->
+          <div>
+            <img
+              src="./img/icon-cart.svg"
+              alt="An image of a cart"
+              role="button"
+              aria-expanded="false"
+              aria-controls="cart"
+              data-cart-btn-mobile
+            />
+            <span class="display-quantity hide" data-quantity cart-quantity-item
+              >0</span
+            >
+          </div>
+          <!-- Proflile -->
+          <div>
+            <img
+              src="./img/image-avatar.png"
+              alt="A profile avater"
+              role="button"
+              aria-expanded="false"
+              aria-controls="cart"
+              data-profile-mobile
+            />
+          </div>
+        </section>
+      </nav>
+
+      <!-- Display when the Nav is opened on mobile -->
+      <aside class="opened__navigation hide" data-menu-content-mobile>
+        <!-- Content -->
+        <section
+          class="opened__navigation-content"
+          data-menu-content-container-mobile
+        >
+          <!-- Wrapper -->
+          <div class="container">
+            <!-- Close button -->
+            <div class="close-nav">
+              <img
+                role="button"
+                src="./img/icon-close.svg"
+                alt="An icon svg to close the navigation"
+                data-close-menu
+              />
+            </div>
+
+            <ul data-list-mobile>
+              <li><a href="#header">Collections</a></li>
+              <li><a href="#header">Men</a></li>
+              <li><a href="#main"> Women</a></li>
+              <li><a href="#main">About</a></li>
+              <li><a href="#footer">Contact</a></li>
+            </ul>
+          </div>
+        </section>
+        <!-- Overlay -->
+        <section class="opened__navigation-overlay" data-menu-overlay></section>
+      </aside>
+      <!-- Cart Mobile -->
+
+      <!--#Add to cart -->
+      <aside class="cart-mobile hide" data-cart-mobile>
+        <!-- header -->
+        <section class="cart-mobile__content" data-cart-content-mobile>
+          <h3 class="heading-secondary">Cart</h3>
+          <hr />
+          <aside class="empty-cart" data-empty-cart>
+            <span> Your cart is empty.</span>
+          </aside>
+          <!-- Items being added to the cart -->
+          <section class="cart-mobile__item hide" data-cartInformation>
+            <div class="item-sum">
+              <!-- Image -->
+              <div class="item-sum__img">
+                <img
+                  src="./img/image-product-1-thumbnail.jpg"
+                  alt="thumbnail of the product"
+                />
+              </div>
+              <!-- Total -->
+              <div class="item-sum__total">
+                <h2>
+                  Fall Limited Edition Sneakers
+                  <span class="cost"
+                    >$125.00 x <span data-quantity>0</span>
+                    <span class="total" data-total> $375.00 </span>
+                  </span>
+                </h2>
+              </div>
+              <!-- Delet Items -->
+              <div class="item-sum__delete">
+                <img
+                  role="button"
+                  src="./img/icon-delete.svg"
+                  alt="an svg to delte item from cart"
+                  data-delete
+                />
+              </div>
+            </div>
+
+            <!-- Checkout BUtton -->
+            <div class="checkout">
+              <a href="" data-checkout> Checkout</a>
+            </div>
+          </section>
+        </section>
+      </aside>
+    </header>
+
+    <main id="main" class="main">
+      <article class="ecommerce-slider">
+        <section class="ecommerce-slider__wrapper">
+          <!-- 1 -->
+          <div class="ecommerce-slider__img lazy-img-container" slides-mobile>
+            <img
+              class="lazy-img"
+              data-src="./img/image-product-1.jpg"
+              alt="An image displaying a shoe for sale"
+            />
+          </div>
+          <!-- 2 -->
+          <div class="ecommerce-slider__img lazy-img-container" slides-mobile>
+            <img
+              class="lazy-img"
+              data-src="./img/image-product-2.jpg"
+              alt="An image displaying a shoe for sale"
+            />
+          </div>
+          <!-- 3 -->
+          <div class="ecommerce-slider__img lazy-img-container" slides-mobile>
+            <img
+              class="lazy-img"
+              data-src="./img/image-product-3.jpg"
+              alt="An image displaying a shoe for sale"
+            />
+          </div>
+          <!-- 4 -->
+          <div class="ecommerce-slider__img lazy-img-container" slides-mobile>
+            <img
+              class="lazy-img"
+              data-src="./img/image-product-4.jpg"
+              alt="An image displaying a shoe for sale"
+            />
+          </div>
+        </section>
+
+        <!-- slider -->
+        <div class="ecommerce-slider__btn right">
+          <a href="#" data-next-container>
+            <img
+              data-next
+              src="./img/icon-next.svg"
+              alt="An svg on a arrow pointing to the right"
+            />
+          </a>
+        </div>
+
+        <div class="ecommerce-slider__btn left">
+          <a href="#" data-prev-container>
+            <img
+              data-prev
+              src="./img/icon-previous.svg"
+              alt="An svg on an arrow pointing to the left"
+            />
+          </a>
+        </div>
+      </article>
+
+      <!-- TODO: SLider For Desktop -->
+
+      <article class="ecommerce-slider__desktop">
+        <!-- SLider container -->
+        <section class="ecommerce-slider__desktop-slider">
+          <!-- Slider -->
+          <div class="slider" data-slide-container>
+            <!-- 1 -->
+            <div class="slider-img lazy-img-container" data-slide-desktop>
+              <img
+                class="lazy-img"
+                data-src="./img/image-product-1.jpg"
+                alt="An image displaying a shoe for sale"
+              />
+            </div>
+            <!-- 2 -->
+            <div class="slider-img lazy-img-container" data-slide-desktop>
+              <img
+                class="lazy-img"
+                data-src="./img/image-product-2.jpg"
+                alt="An image displaying a shoe for sale"
+              />
+            </div>
+            <!-- 3 -->
+            <div class="slider-img lazy-img-container" data-slide-desktop>
+              <img
+                class="lazy-img"
+                data-src="./img/image-product-3.jpg"
+                alt="An image displaying a shoe for sale"
+              />
+            </div>
+            <!-- 4 -->
+            <div class="slider-img lazy-img-container" data-slide-desktop>
+              <img
+                class="lazy-img"
+                data-src="./img/image-product-4.jpg"
+                alt="An image displaying a shoe for sale"
+              />
+            </div>
+          </div>
+          <!-- 
+                             -->
+          <!-- DropBox -->
+          <div class="dropbox">
+            <!-- 1 -->
+            <div class="dropbox__img" data-slide-control="0">
+              <img
+                src="./img/image-product-1-thumbnail.jpg"
+                alt="An image displaying a shoe for sale"
+              />
+            </div>
+            <!-- 2 -->
+            <div class="dropbox__img" data-slide-control="1">
+              <img
+                src="./img/image-product-2-thumbnail.jpg"
+                alt="An image displaying a shoe for sale"
+              />
+            </div>
+            <!-- 3 -->
+            <div class="dropbox__img" data-slide-control="2">
+              <img
+                src="./img/image-product-3-thumbnail.jpg"
+                alt="An image displaying a shoe for sale"
+              />
+            </div>
+            <!-- 4 -->
+            <div class="dropbox__img" data-slide-control="3">
+              <img
+                src="./img/image-product-4-thumbnail.jpg"
+                alt="An image displaying a shoe for sale"
+              />
+            </div>
+          </div>
+        </section>
+      </article>
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------ -->
+      <aside class="ecommerce-product-overlay hide" data-overlay>
+        <section class="ecommerce-product-overlay__wrapper">
+          <div class="container">
+            <!-- 1 -->
+            <div
+              class="slider-img lazy-img-container"
+              data-slide-overlay-desktop
+            >
+              <img
+                class="lazy-img"
+                data-src="./img/image-product-1.jpg"
+                alt="An image displaying a shoe for sale"
+              />
+            </div>
+            <!-- 2 -->
+            <div
+              class="slider-img lazy-img-container"
+              data-slide-overlay-desktop
+            >
+              <img
+                class="lazy-img"
+                data-src="./img/image-product-2.jpg"
+                alt="An image displaying a shoe for sale"
+              />
+            </div>
+            <!-- 3 -->
+            <div
+              class="slider-img lazy-img-container"
+              data-slide-overlay-desktop
+            >
+              <img
+                class="lazy-img"
+                data-src="./img/image-product-3.jpg"
+                alt="An image displaying a shoe for sale"
+              />
+            </div>
+            <!-- 4 -->
+            <div
+              class="slider-img lazy-img-container"
+              data-slide-overlay-desktop
+            >
+              <img
+                class="lazy-img"
+                data-src="./img/image-product-4.jpg"
+                alt="An image displaying a shoe for sale"
+              />
+            </div>
+          </div>
+          <!-- BUTTONS -->
+          <!--  -->
+          <div class="overlaybtn right" data-nextbtn>
+            <a href="#" class="a" data-next-desktop-container>
+              <img
+                src="./img/icon-next.svg"
+                alt="An svg on a arrow pointing to the right"
+              />
+            </a>
+          </div>
+
+          <div class="overlaybtn left" data-previous>
+            <a href="#" class="a" data-prev-desktop-container>
+              <img
+                src="./img/icon-previous.svg"
+                alt="An svg on an arrow pointing to the left"
+              />
+            </a>
+          </div>
+
+          <!-- TO CLOSE THE OVER LAY -->
+          <a href="#" class="a closetab" data-closebtn>
+            <img src="./img/icon-close.svg" alt="An svg of an x to close tab" />
+          </a>
+
+          <!-- THE DROP BOX -->
+          <div class="img-box">
+            <!-- 1 -->
+            <div class="img-box__img" data-slide-control="0">
+              <img
+                src="./img/image-product-1-thumbnail.jpg"
+                alt="An image displaying a shoe for sale"
+              />
+            </div>
+            <!-- 2 -->
+            <div class="img-box__img" data-slide-control="1">
+              <img
+                src="./img/image-product-2-thumbnail.jpg"
+                alt="An image displaying a shoe for sale"
+              />
+            </div>
+            <!-- 3 -->
+            <div class="img-box__img" data-slide-control="2">
+              <img
+                src="./img/image-product-3-thumbnail.jpg"
+                alt="An image displaying a shoe for sale"
+              />
+            </div>
+            <!-- 4 -->
+            <div class="img-box__img" data-slide-control="3">
+              <img
+                src="./img/image-product-4-thumbnail.jpg"
+                alt="An image displaying a shoe for sale"
+              />
+            </div>
+          </div>
+        </section>
+      </aside>
+      <!-- ------------------------------------------------------------------------------------------------------------ -->
+      <!-- ------------------------------------------------------------------------------------------------------------ -->
+      <!-- Product Infromation -->
+      <article class="ecommerce-product">
+        <!-- ------------------------------------------------------------------------------------------- -->
+        <!-- ------------------------------------------------------------------------------------------- -->
+        <section class="ecommerce-product__details">
+          <!-- brand Name -->
+          <span class="heading-brand">Sneaker Company</span>
+          <h1 class="heading-primary">
+            Fall Limited Edition
+            <span> Sneakers </span>
+          </h1>
+          <p class="heading-p">
+            These low-profile sneakers are your perfect casual wear companion.
+            <span>
+              Featuring a durable rubber outer sole, they’ll withstand
+              everything
+            </span>
+
+            the weather can offer.
+          </p>
+        </section>
+
+        <!-- Add To Cart -->
+        <section class="ecommerce-product__addtocard">
+          <!-- Price -->
+          <div class="price">
+            <h2 class="heading-secondary" data-price>
+              $125.00 <span>50%</span>
+            </h2>
+            <h3 class="heading-third">$250.00</h3>
+          </div>
+
+          <div class="cart-Desktop">
+            <!--Quantity of Item-->
+            <section class="cart">
+              <!-- Reduce -->
+              <div class="quantity">
+                <a href="#" role="button">
+                  <img
+                    src="./img/icon-minus.svg"
+                    alt="an svg of a plus symbole "
+                    data-reduce
+                /></a>
+              </div>
+              <!-- Quantity -->
+              <div class="quantity-increase"><span data-quantity>0</span></div>
+              <!-- Increase -->
+              <div class="quantity">
+                <a href="#" role="button">
+                  <img
+                    src="./img/icon-plus.svg"
+                    alt="an svg of a minus symbole "
+                    data-increase
+                /></a>
+              </div>
+            </section>
+            <!--Add to cart button-->
+            <a href="#" role="button" class="add-to-cart" data-addtoCart>
+              <div class="icon-container">
+                <img src="./img/icon-cart.svg" alt="Add to cart" />
+              </div>
+              <span>Add to cart</span>
+            </a>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer id="footer" class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Peter Godspower</a>.
+    </footer>
+  </body>
+</html>
